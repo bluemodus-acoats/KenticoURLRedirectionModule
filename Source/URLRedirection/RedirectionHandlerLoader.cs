@@ -119,7 +119,7 @@ namespace URLRedirection
                         Args.CurrentCulture = (LocalizationContext.CurrentCulture != null ? LocalizationContext.CurrentCulture.CultureCode : SiteCultureUrlSettings.DefaultCultureCode);
 
                         // Next check the Domain, if it's a culture specific domain alias, then prioritize that.
-                        var CultureConfigForUrl = CultureConfigs.Where(x => x.Value.DomainAlias.IndexOf(RequestUrlUri.Host, StringComparison.InvariantCultureIgnoreCase) >= 0).Select(x => x.Value).FirstOrDefault();
+                        var CultureConfigForUrl = CultureConfigs.Where(x => ValidationHelper.GetString(x.Value.DomainAlias, "").IndexOf(RequestUrlUri.Host, StringComparison.InvariantCultureIgnoreCase) >= 0).Select(x => x.Value).FirstOrDefault();
                         if (CultureConfigForUrl != null && !CultureConfigForUrl.IsMainDomain)
                         {
                             Args.CurrentCulture = CultureConfigForUrl.CultureCode;
