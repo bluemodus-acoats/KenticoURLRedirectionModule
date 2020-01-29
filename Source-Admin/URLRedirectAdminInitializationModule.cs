@@ -21,7 +21,7 @@ namespace URLRedirection.Admin
         {
             if (e.ResourceName.Equals("URLRedirection", System.StringComparison.InvariantCultureIgnoreCase))
             {
-                e.Manifest.Metadata.Id = "KenticoURLRedirection.Admin";
+                e.Manifest.Metadata.Id = "HBS.KenticoURLRedirection.Admin";
                 e.Manifest.Metadata.ProjectUrl = "https://github.com/silvertech/KenticoURLRedirectionModule";
                 e.Manifest.Metadata.IconUrl = "https://github.com/silvertech/KenticoURLRedirectionModule/blob/master/silvertech-logo.png?raw=true";
                 e.Manifest.Metadata.Copyright = "";

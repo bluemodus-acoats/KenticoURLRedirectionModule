@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>KenticoURLRedirection.MVC</id>
+    <id>HBS.KenticoURLRedirection.MVC</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>SilverTech, Inc and HBS</authors>
