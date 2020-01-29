@@ -226,7 +226,7 @@ namespace URLRedirection
             // Get the Relative non virtual path, to do this must have a Virtualized relative path or one with a ~
             Path = VirtualPathUtility.MakeRelative("~", Path);
 
-            return Path.Split('?')[0].Split('#')[0].Trim('/').Replace("%7B", "{").Replace("%7D", "}") + PathEnding;
+            return "/"+Path.Split('?')[0].Split('#')[0].Trim('/').Replace("%7B", "{").Replace("%7D", "}") + PathEnding;
         }
 
         /// <summary>
