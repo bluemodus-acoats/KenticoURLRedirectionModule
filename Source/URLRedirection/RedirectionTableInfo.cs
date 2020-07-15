@@ -27,7 +27,7 @@ namespace URLRedirection
         /// <summary>
         /// Type information.
         /// </summary>
-        public static readonly ObjectTypeInfo TYPEINFO = new ObjectTypeInfo(typeof(RedirectionTableInfoProvider), OBJECT_TYPE, "URLRedirection.RedirectionTable", "RedirectionTableID", "RedirectionTableLastModified", "RedirectionTableGuid", null, null, null, "RedirectionSiteID", null, null)
+        public static readonly ObjectTypeInfo TYPEINFO = new ObjectTypeInfo(typeof(RedirectionTableInfoProvider), OBJECT_TYPE, "URLRedirection.RedirectionTable", "RedirectionTableID", "RedirectionTableLastModified", "RedirectionTableGuid", null, null, null, null, null, null)
         {
             ModuleName = "URLRedirection",
             TouchCacheDependencies = true,

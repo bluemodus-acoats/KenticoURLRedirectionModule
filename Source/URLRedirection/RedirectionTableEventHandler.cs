@@ -20,23 +20,6 @@ namespace URLRedirection
         protected override void OnInit()
         {
             base.OnInit();
-
-            RedirectionTableInfo.TYPEINFO.Events.Insert.After += Insert_After;
-        }
-
-        private void Insert_After(object sender, ObjectEventArgs e)
-        {
-            if(e.Object != null)
-            {
-                var redirectItem = (RedirectionTableInfo)e.Object;
-
-                if(redirectItem.RedirectionSiteID == 0)
-                {
-                    redirectItem.RedirectionSiteID = SiteContext.CurrentSiteID;
-
-                    redirectItem.Update();
-                }
-            }
         }
     }
 }

@@ -33,5 +33,5 @@ using CMS;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("12.0.5.0")]
-[assembly: AssemblyFileVersion("12.0.5.0")]
+[assembly: AssemblyVersion("12.0.6.0")]
+[assembly: AssemblyFileVersion("12.0.6.0")]

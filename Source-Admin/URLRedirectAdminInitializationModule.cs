@@ -26,7 +26,7 @@ namespace URLRedirection.Admin
                 e.Manifest.Metadata.IconUrl = "https://github.com/silvertech/KenticoURLRedirectionModule/blob/master/silvertech-logo.png?raw=true";
                 e.Manifest.Metadata.Copyright = "";
                 e.Manifest.Metadata.Title = "Kentico URL Redirection";
-                e.Manifest.Metadata.ReleaseNotes = "Updated to include In-Culture handling, Query String and Hash tag support, relative virtual or absolute URL, Exact Match and Culture override";
+                e.Manifest.Metadata.ReleaseNotes = "Fixed Staging Issue";
                 e.Manifest.Metadata.Tags = "URL Redirection, URL, Redirect, Kentico, MVC";
             }
         }
