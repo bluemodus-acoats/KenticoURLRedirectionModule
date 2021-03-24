@@ -6,11 +6,11 @@
     <title>$title$</title>
     <authors>SilverTech, Inc and HBS</authors>
     <owners>SilverTech, Inc and HBS</owners>
-    <projectUrl>https://github.com/silvertech/KenticoURLRedirectionModule</projectUrl>
-    <iconUrl>https://github.com/silvertech/KenticoURLRedirectionModule/blob/master/silvertech-logo.png?raw=true</iconUrl>
+    <projectUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Kentico/devnet.kentico.com/master/marketplace/assets/generic-integration.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Updated to include In-Culture handling, Query String and Hash tag support, relative virtual or absolute URL, Exact Match and Culture override</releaseNotes>
+    <releaseNotes>Added event to remove spaces before and after URLs and added trim to prevent error when spaces existed</releaseNotes>
     <copyright></copyright>
     <tags>URL Redirection, URL, Redirect, Kentico, MVC</tags>
   </metadata>
