@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <actions>
+    <action name="edit" caption="$General.Edit$" fonticonclass="icon-edit" fonticonstyle="allow" />
+    <action name="#delete" caption="$General.Delete$" fonticonclass="icon-bin" fonticonstyle="critical" confirmation="$General.ConfirmDelete$" />
+  </actions>
+  <columns>
+    <column source="RedirectionEnabled" caption="Enabled" wrap="false" localize="false" externalsourcename="#yesno">
+      <filter type="bool"/>
+    </column>
+    <column source="RedirectionOriginalURL" caption="Original URL" wrap="false" localize="true">
+      <filter type="text" size="1000" />
+    </column>
+    <column source="RedirectionExactMatch" caption="Exact Match Required" wrap="false" localize="false" externalsourcename="#yesno"/>
+    <column source="RedirectionTargetURL" caption="Target URL" wrap="true" localize="true" externalsourcename="targeturl">
+      <filter type="text" size="450" />
+    </column>
+    <column source="RedirectionAppendQueryString" caption="Append Query" wrap="false" localize="false" externalsourcename="#yesno"/>
+    <column source="RedirectionDescription" caption="Comment" wrap="true" width="700" localize="true" externalsourcename="description" >
+      <filter type="text" />
+    </column>
+  </columns>
+  <options>
+    <key name="FilterLimit" value="0" />
+    <key name="DisplayFilter" value="true" />
+  </options>
+</grid>

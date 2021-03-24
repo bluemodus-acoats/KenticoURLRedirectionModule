@@ -441,6 +441,10 @@ namespace URLRedirection
                     EventLogProvider.LogException("RedirectionMethods.Redirect", "REDIRECT_FAILED", ex, additionalMessage: "An exception occurred during the redirect process");
                 }
             }
+            catch (ThreadAbortException)
+            {
+                //Do nothing: this exception is thrown by Response.Redirect() in the redirect method. We only want to log other kinds of exceptions
+            }
             catch (Exception ex)
             {
                 EventLogProvider.LogException("URLRedirect", "GeneralError", ex, additionalMessage: "For " + HttpContext.Current.Request.Url.ToString());

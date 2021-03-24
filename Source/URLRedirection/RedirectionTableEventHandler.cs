@@ -21,22 +21,24 @@ namespace URLRedirection
         {
             base.OnInit();
 
-            RedirectionTableInfo.TYPEINFO.Events.Insert.After += Insert_After;
+            RedirectionTableInfo.TYPEINFO.Events.Insert.Before += InsertUpdate_Before;
+            RedirectionTableInfo.TYPEINFO.Events.Update.Before += InsertUpdate_Before;
         }
 
-        private void Insert_After(object sender, ObjectEventArgs e)
+        private void InsertUpdate_Before(object sender, ObjectEventArgs e)
         {
-            if(e.Object != null)
+            RedirectionTableInfo TableObj = (RedirectionTableInfo)e.Object;
+            TableObj.RedirectionOriginalURL = TableObj.RedirectionOriginalURL.Trim();
+            TableObj.RedirectionTargetURL = TableObj.RedirectionTargetURL.Trim();
+
+            // Set Site ID
+            if (TableObj.RedirectionSiteID == 0)
             {
-                var redirectItem = (RedirectionTableInfo)e.Object;
-
-                if(redirectItem.RedirectionSiteID == 0)
-                {
-                    redirectItem.RedirectionSiteID = SiteContext.CurrentSiteID;
-
-                    redirectItem.Update();
-                }
+                TableObj.RedirectionSiteID = SiteContext.CurrentSiteID;
+                TableObj.Update();
             }
         }
+
+       
     }
 }
