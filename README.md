@@ -1,6 +1,8 @@
 [![Nuget](https://img.shields.io/badge/nuget-v12.0.2-blue.svg)](https://www.nuget.org/packages/KenticoURLRedirection/)
 # Kentico 12 URL Redirection Module
-This module adds an interface in the CMS to allow a user to edit and manage URL Redirects in one place. The module supports multi-site instances and multi-culture sites (more details below). The latest version of this module is Version 12.0.2. The source code for this module is included in this repo if you wish to clone and modify it anyway you see fit. 
+This module adds an interface in the CMS to allow a user to edit and manage URL Redirects in one place. The module supports multi-site instances and multi-culture sites (more details below). The source code for this module is included in this repo if you wish to clone and modify it anyway you see fit. 
+
+It was originally created by Silver Tech, but it was forked off by HBS.  Most of what is in here is now in the Silver tech Variant, however this one has the admin and mvc split into two separate packages which prevents un-needed files from being copied into the MVC site.
 
 ## Compatibility
 
@@ -10,14 +12,14 @@ This module adds an interface in the CMS to allow a user to edit and manage URL 
 
 ## Installation Instructions
 
-Install the latest version of the Kentico URL Redirection Admin [nuget package](https://www.nuget.org/packages/KenticoURLRedirection.Admin/) on your Kentico installation
-`Install-Package KenticoUrlRedirection.Admin`
+Install the latest version of the Kentico URL Redirection Admin [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.Admin/) on your Kentico installation
+`Install-Package HBS.KenticoUrlRedirection.Admin`
 
-Aand if you have any MVC Sites, install the Kentico URL Redirection MVC [nuget package](https://www.nuget.org/packages/KenticoURLRedirection.MVC/)
-`Install-Package KenticoUrlRedirection.MVC`
+Aand if you have any MVC Sites, install the Kentico URL Redirection MVC [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.MVC/)
+`Install-Package HBS.KenticoUrlRedirection.MVC`
 
 After installation, rebuild and check the event log of the site and you should see a line like this:
-![Module Installed Successfully](https://github.com/silvertech/KenticoURLRedirectionModule/blob/master/Readme%20Assets/moduleintalled-eventlog.png?raw=true)
+![Module Installed Successfully](https://github.com/KenticoDevTrev/KenticoURLRedirectionModule/blob/master/Readme%20Assets/moduleintalled-eventlog.png?raw=true)
 
 To update the module to a more recent version, simply update the NuGet package.
 
@@ -82,7 +84,7 @@ This module has an `UrlRedirectionEvents.GetRequestCulture` Event that you can h
 Exact Match will match based on the URL and the Query String, but since Hash values are not passed to the server, they will are not tracked for matching.
 
 ## License
-This project uses a standard MIT license which can be found [here](https://github.com/silvertech/KenticoURLRedirectionModule/blob/master/LICENSE).
+This project uses a standard MIT license which can be found [here](https://github.com/KenticoDevTrev/KenticoURLRedirectionModule/blob/master/LICENSE).
 
 ## Contribution
 Contributions to this module are welcome. All the source files for this module are included and you just need to add the project to a Kentico Web Application solution and you can start editing anything you like. A ZIP export of the most recent, _unsealed_, version of the module is also included in the root of this repo so you can easily import the module database items into your Kentico project through the **Sites** application. This file is named **KenticoURLRedirection_12.0.3.zip** and will be needed if you want to edit anything related to the module inside the CMS.
@@ -90,4 +92,4 @@ Contributions to this module are welcome. All the source files for this module a
  Submit a pull request to the repo with your code changes as well as an updated ZIP file (if CMS changes were made) and we will review and provide feedback. We will also update the NuGet package to a new version once we approve your changes.
 
 ## Support
-Any bugs can be listed as issues here in GitHub or can be sent to our email alerts@silvertech.com. We will respond as soon as we can.
+Any bugs can be listed as issues here in GitHub or can be sent to our email tfayas@hbs.net. We will respond as soon as we can.
