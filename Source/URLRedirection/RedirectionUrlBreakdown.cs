@@ -60,6 +60,7 @@ namespace URLRedirection
 
         public RedirectionUrlBreakdown(string Url, int SiteID)
         {
+            Url = Url.Trim();
             OriginalUrl = Url;
             this.SiteID = SiteID;
             IsVirtualPath = Url.Contains("~");
