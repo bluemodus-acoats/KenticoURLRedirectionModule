@@ -1,0 +1,12 @@
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\bin\Release\netstandard2.0\HBS.KenticoUrlRedirection.deps.json
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\bin\Release\netstandard2.0\HBS.KenticoUrlRedirection.dll
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\bin\Release\netstandard2.0\HBS.KenticoUrlRedirection.pdb
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\bin\Release\netstandard2.0\HBS.KenticoURLRedirection.Base.dll
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\bin\Release\netstandard2.0\HBS.KenticoURLRedirection.Base.pdb
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.csprojAssemblyReference.cache
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.AssemblyInfoInputs.cache
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.AssemblyInfo.cs
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.csproj.CoreCompileInputs.cache
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.csproj.CopyComplete
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.dll
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection\HBS.KenticoUrlRedirection\obj\Release\netstandard2.0\HBS.KenticoUrlRedirection.pdb

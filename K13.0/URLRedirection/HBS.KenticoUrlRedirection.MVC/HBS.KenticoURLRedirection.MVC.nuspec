@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HBS.KenticoURLRedirection.MVC</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Heartland Business Systems</authors>
+    <owners>Heartland Business Systems</owners>
+    <projectUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</projectUrl>
+    <iconUrl>https://www.hbs.net/apple-touch-icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Updated to KX 13</releaseNotes>
+    <copyright></copyright>
+    <tags>URL Redirection, URL, Redirect, Kentico, MVC</tags>
+<dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Kentico.Xperience.Libraries" version="13.0.0" exclude="Build,Analyzers" />
+        <dependency id="HBS.KenticoURLRedirection.Base" version="13.0.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>13.0.2</Version>
+    <Authors>Trevor Fayas</Authors>
+    <Company>Heartland Business Systems</Company>
+    <Product>Kentico Xperience 13 URL Redirection</Product>
+    <Description>(This is the shared Base package, please either use HBS.KenticoURLRedirection.Admin for the admin site, or HBS.KenticoURLRedirection.Core / HBS.KenticoURLRedirection for the MVC.Net Core / MVC.Net site, respectively)
+
+Originally started with Silvertech, this is the HBS Variant that expanded the functionality of the URL redirection.  This tool allows you to create 301 or 302 redirects with functions such as Query String append/combination, exact or approx matching, etc.</Description>
+    <Copyright>Trevor Fayas @HBS.net</Copyright>
+    <RepositoryUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</RepositoryUrl>
+    <PackageIcon>favicon-96x96.png</PackageIcon>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>Kentico Xperience, URL, Redirect</PackageTags>
+    <PackageReleaseNotes>Added missing default Interface implementation attributes for Admin side</PackageReleaseNotes>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile></PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\tfayas\Desktop\favicon-96x96.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

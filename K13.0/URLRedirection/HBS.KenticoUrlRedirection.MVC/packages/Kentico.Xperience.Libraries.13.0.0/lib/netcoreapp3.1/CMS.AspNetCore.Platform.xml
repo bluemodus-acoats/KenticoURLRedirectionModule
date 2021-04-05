@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CMS.AspNetCore.Platform</name>
+    </assembly>
+    <members>
+        <member name="T:CMS.AspNetCore.Platform.ApplicationRestartService">
+            <summary>
+            NetCore implementation of Application Restart service.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ApplicationRestartService.#ctor(Microsoft.Extensions.Hosting.IHostApplicationLifetime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.ApplicationRestartService"/> class.
+            </summary>
+            <param name="applicationLifetime">Application Lifetime service.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ApplicationRestartService.TriggerRestart">
+            <summary>
+            Attempts to stop an application using <see cref="T:Microsoft.Extensions.Hosting.IHostApplicationLifetime"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.CachePolicyImpl">
+            <summary>
+            Wrapper object implementing <see cref="T:CMS.Base.Internal.ICache"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.#ctor(Microsoft.AspNetCore.Http.HttpResponse)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.CachePolicyImpl"/> class.
+            </summary>
+            <param name="response">HttpResponse abstraction.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.SetCacheability(CMS.Base.Internal.HttpCacheability)">
+            <summary>
+            Sets the <see langword="Cache-Control"/> header value.
+            </summary>
+            <param name="httpCacheability">The <see cref="T:CMS.Base.Internal.HttpCacheability" /> enumeration value to set the header to.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.SetRevalidation(CMS.Base.Internal.HttpCacheRevalidation)">
+            <summary>
+            Sets the <see langword="Cache-Control"/> HTTP header value to either the <c>must-revalidate</c>
+            or the <c>proxy-revalidate</c> directives, based on the specified enumeration value.
+            </summary>
+            <param name="httpCacheRevalidation">The <see cref="T:CMS.Base.Internal.HttpCacheRevalidation"/> enumeration.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.SetExpires(System.DateTime)">
+            <summary>
+            Sets the <c>Expires</c> HTTP header to an absolute date and time.
+            </summary>
+            <param name="date">The absolute expiration time.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.SetLastModified(System.DateTime)">
+            <summary>
+            Sets the <c>Last-Modified</c> HTTP header to the specified date and time.
+            </summary>
+            <param name="date">The date-time value to set the <c>Last-Modified</c> header to.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.CachePolicyImpl.SetETag(System.String)">
+            <summary>
+            Sets the <c>ETag</c> HTTP header to the specified string.
+            </summary>
+            <param name="etag">The text to use for the <c>ETag</c> header.</param>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Internal.HttpContextExtensions">
+            <summary>
+            Extensions for <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> class.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Internal.HttpContextExtensions.GetProxy(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Wraps the .NET Core <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> within a proxy class implementation of <see cref="T:CMS.Base.Internal.IHttpContext"/>.
+            </summary>
+            <param name="httpContext">The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> to proxy.</param>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Internal.ResponseHeadersExtensions">
+            <summary>
+            Extensions for <see cref="T:Microsoft.AspNetCore.Http.Headers.ResponseHeaders"/> class.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Internal.ResponseHeadersExtensions.SetCacheability(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Internal.HttpCacheability)">
+            <summary>
+            Sets the <see langword="Cache-Control"/> header value.
+            </summary>
+            <param name="headers">The <see cref="T:Microsoft.AspNetCore.Http.Headers.ResponseHeaders"/> to update.</param>
+            <param name="httpCacheability">The <see cref="T:CMS.Base.Internal.HttpCacheability" /> enumeration value to set the header to.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Internal.ResponseHeadersExtensions.SetRevalidation(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Internal.HttpCacheRevalidation)">
+            <summary>
+            Sets the <see langword="Cache-Control"/> HTTP header value to either the <c>must-revalidate</c>
+            or the <c>proxy-revalidate</c> directives, based on the specified enumeration value.
+            </summary>
+            <param name="headers">The <see cref="T:Microsoft.AspNetCore.Http.Headers.ResponseHeaders"/> to update.</param>
+            <param name="httpCacheRevalidation">The <see cref="T:CMS.Base.Internal.HttpCacheRevalidation"/> enumeration.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Internal.ResponseHeadersExtensions.SetNoStore(Microsoft.AspNetCore.Http.Headers.ResponseHeaders)">
+            <summary>
+            Sets the <see langword="Cache-Control: no-store"/> HTTP header.
+            </summary>
+            <param name="headers">The <see cref="T:Microsoft.AspNetCore.Http.Headers.ResponseHeaders"/> to update.</param>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.IHttpCookieExtensions">
+            <summary>
+            Extensions for <see cref="T:CMS.Base.Internal.IHttpCookie"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.IHttpCookieExtensions.ToCookieOptions(CMS.Base.Internal.IHttpCookie)">
+            <summary>
+            Returns instance of <see cref="T:Microsoft.AspNetCore.Http.CookieOptions"/> with same values as <see cref="T:CMS.Base.Internal.IHttpCookie"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.FormCollectionImpl">
+            <summary>
+            Class representing collection of form values of <see cref="T:CMS.Base.Internal.IRequest"/>. 
+            Proxies method calls to underlying <see cref="T:Microsoft.AspNetCore.Http.IFormCollection"/> instance.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.FormCollectionImpl.#ctor(Microsoft.AspNetCore.Http.IFormCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.FormCollectionImpl"/> class.
+            </summary>
+            <param name="formCollection">Underlying collection to proxy methods to.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.FormCollectionImpl.Item(System.String)">
+            <summary>
+            Gets value of the form item specified by <paramref name="key"/>.
+            </summary>
+            <param name="key">Key of the value to get.</param>
+            <returns>Value of the form item if it is present, otherwise <see cref="F:Microsoft.Extensions.Primitives.StringValues.Empty"/>.</returns>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.FormCollectionImpl.Count">
+            <summary>
+            Gets the number of form items.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.FormCollectionImpl.Keys">
+            <summary>
+            Gets collection containing name keys of the form.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.FormCollectionImpl.Files">
+            <inheritdoc/>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.FormCollectionImpl.ContainsKey(System.String)">
+            <summary>
+            Determines whether the collection contains a form item with specified name.
+            </summary>
+            <param name="key">Name of the tested form item.</param>
+            <returns>True if the key is present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.FormCollectionImpl.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.FormCollectionImpl.TryGetValue(System.String,Microsoft.Extensions.Primitives.StringValues@)">
+            <summary>
+            Retrieves value of form item specified by given name.
+            </summary>
+            <param name="key">Name of the form item for which value is retrieved.</param>
+            <param name="value">If the key is found the value associated with the specified key, otherwise the default value for the type of the value parameter.</param>
+            <returns>True if query string item was present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.FormCollectionImpl.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.HeaderDictionaryImpl">
+            <summary>
+            Class representing header dictionary of <see cref="T:CMS.Base.Internal.IHeaderDictionary"/>. 
+            Proxies method calls to underlying <see cref="T:Microsoft.AspNetCore.Http.IHeaderDictionary"/> instance.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.#ctor(Microsoft.AspNetCore.Http.IHeaderDictionary)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.HeaderDictionaryImpl"/> class.
+            </summary>
+            <param name="headerDictionary">Underlying collection to proxy methods to.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Item(System.String)">
+            <summary>
+            Gets and sets a header.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Keys">
+            <summary>
+            Gets collection containing names of all set header.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Values">
+            <summary>
+            Gets collection containing values of all set headers.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Count">
+            <summary>
+            Gets the number of set headers.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HeaderDictionaryImpl.IsReadOnly">
+            <summary>
+            Indicates whether the collection is readonly. Returns false in this implementation.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Add(System.String,Microsoft.Extensions.Primitives.StringValues)">
+            <summary>
+            Adds a new header.
+            </summary>
+            <param name="key">Name of the header.</param>
+            <param name="value">Value of the header.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Add(System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues})">
+            <summary>
+            Adds a new header.
+            </summary>
+            <param name="item">Key value pair representing the header.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Clear">
+            <summary>
+            Removes all headers from the collection.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Contains(System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues})">
+            <summary>
+            Determines whether the collection contains a header with specified name and value.
+            </summary>
+            <param name="item">Key value pair representing the tested header.</param>
+            <returns>True if the item is present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.ContainsKey(System.String)">
+            <summary>
+            Determines whether the collection contains a header with specified name.
+            </summary>
+            <param name="key">Name of the tested header.</param>
+            <returns>True if the key is present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.CopyTo(System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues}[],System.Int32)">
+            <summary>
+            Copies all headers to <paramref name="array"/> starting at <paramref name="arrayIndex"/>.
+            Caller must ensure sufficient length of the array.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Remove(System.String)">
+            <summary>
+            Remove header with given name from the collection.
+            </summary>
+            <param name="key">Name of the header to be removed.</param>
+            <returns>True if the key was removed. False if the key was not present in the collection.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.Remove(System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues})">
+            <summary>
+            Removes header with given name and value from the collection.
+            </summary>
+            <param name="item">Key value pair representing header to be removed.</param>
+            <returns>True if the item was removed. False if the item was not present in the collection.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.TryGetValue(System.String,Microsoft.Extensions.Primitives.StringValues@)">
+            <summary>
+            Retrieves value of header specified by given name.
+            </summary>
+            <param name="key">Name of the header for which value is retrieved.</param>
+            <param name="value">If the key is found the value associated with the specified key, otherwise the default value for the type of the value parameter.</param>
+            <returns>True if header was present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HeaderDictionaryImpl.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.HttpContextImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> object implementing <see cref="T:CMS.Base.Internal.IHttpContext"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HttpContextImpl.#ctor(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.HttpContextImpl"/> class.
+            </summary>
+            <param name="context">HttpContext abstraction.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HttpContextImpl.Items">
+            <summary>
+            Gets or sets a key/value collection that can be used to share data within the
+            scope of this request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HttpContextImpl.Request">
+            <summary>
+            Gets the <see cref="T:CMS.Base.Internal.IRequest"/> object for this request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HttpContextImpl.Response">
+            <summary>
+            Gets the <see cref="T:CMS.Base.Internal.IResponse"/> object for this request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HttpContextImpl.Session">
+            <summary>
+            Gets the <see cref="T:CMS.Base.Internal.ISession"/> object for this request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.HttpContextImpl.User">
+            <summary>
+            Gets or sets the user for this request.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.HttpContextRetrieverImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.IHttpContextAccessor"/> object implementing <see cref="T:CMS.Base.Internal.IHttpContextRetriever"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HttpContextRetrieverImpl.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.HttpContextRetrieverImpl"/> class.
+            </summary>
+            <param name="httpContextAccessor">Underlying IHttpContextAccessor object</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.HttpContextRetrieverImpl.GetContext">
+            <summary>
+            Gets the instance of <see cref="T:CMS.Base.Internal.IHttpContext"/> of current web request.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.HttpCookieImpl">
+            <summary>
+            Wrapper object implementing <see cref="T:CMS.Base.Internal.IHttpCookie"/> interface.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.QueryCollectionImpl">
+            <summary>
+            Class representing query string of <see cref="T:CMS.Base.Internal.IRequest"/>. 
+            Proxies method calls to underlying <see cref="T:Microsoft.AspNetCore.Http.IQueryCollection"/> instance.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.QueryCollectionImpl.#ctor(Microsoft.AspNetCore.Http.IQueryCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.QueryCollectionImpl"/> class.
+            </summary>
+            <param name="queryCollection">Underlying collection to proxy methods to.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.QueryCollectionImpl.Item(System.String)">
+            <summary>
+            Gets a query string value.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.QueryCollectionImpl.Count">
+            <summary>
+            Gets the number of set query string values.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.QueryCollectionImpl.Keys">
+            <summary>
+            Gets collection containing names of all set header.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.QueryCollectionImpl.ContainsKey(System.String)">
+            <summary>
+            Determines whether the collection contains a query string value with specified name.
+            </summary>
+            <param name="key">Name of the tested query string value.</param>
+            <returns>True if the key is present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.QueryCollectionImpl.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.QueryCollectionImpl.TryGetValue(System.String,Microsoft.Extensions.Primitives.StringValues@)">
+            <summary>
+            Retrieves value of query string item specified by given name.
+            </summary>
+            <param name="key">Name of the query string item for which value is retrieved.</param>
+            <param name="value">If the key is found the value associated with the specified key, otherwise the default value for the type of the value parameter.</param>
+            <returns>True if query string item was present, otherwise false.</returns>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.QueryCollectionImpl.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RequestImpl">
+            <summary>
+            Class represents .NET Core version of <see cref="T:CMS.Base.Internal.IRequest"/> interface implementation.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestImpl.#ctor(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Creates an instance of the <see cref="T:CMS.AspNetCore.Platform.RequestImpl"/> class.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.RawUrl">
+            <inheritdoc/>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.Url">
+            <summary>
+            Gets information about the URL of the current request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.Headers">
+            <summary>
+            Gets the collection of HTTP headers that were sent by the client.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.QueryString">
+            <summary>
+            Gets the collection of HTTP query-string variables.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.Cookies">
+            <summary>
+            Gets the collection of cookies that were sent by the client.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.HttpMethod">
+            <summary>
+            Gets the HTTP data-transfer method (such as <see langword="GET" />, <see langword="POST" />, or <see langword="HEAD" />) that was used by the client.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.UserAgent">
+            <summary>
+            Gets the complete user-agent string of the client.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.UrlReferrer">
+            <summary>
+            Gets information about the URL of the client request that linked to the current URL.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.UserLanguages">
+            <summary>
+            Gets a sorted array of client language preferences.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.IsSecureConnection">
+            <summary>
+            Gets a value that indicates whether the HTTP connection uses secure sockets (HTTPS protocol).
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.UserHostAddress">
+            <summary>
+            Gets the IP host address of the client.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.Form">
+            <summary>
+            Gets the form collection.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestImpl.RequestContext">
+            <summary>
+            Gets the information about an HTTP request that matches a defined route.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestImpl.GetServerVariableHttpOriginalUrl">
+            <summary>
+            Returns null as according to the https://github.com/aspnet/Mvc/issues/6301 it is not supported now for .NET Core.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestImpl.ReadRequestBodyAsString">
+            <inheritdoc/>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestImpl.ReadRequestBodyAsStringAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestImpl.AllowSynchronousIO">
+            <summary>
+            Enable synchronous IO APIs for current request.
+            </summary>
+            <remarks>This method changes the synchronous IO behavior on per request basis.</remarks>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RequestImpl.EmptyFormCollection">
+            <summary>
+            Implementation of form collection that returns empty results.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RequestImpl.EmptyFormCollection.EmptyUploadedFilesCollection">
+            <summary>
+            Implementation of uploaded files collection that returns empty results.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RequestContextImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> object implementing <see cref="T:CMS.Base.Internal.IRequestContext"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestContextImpl.#ctor(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.RequestContextImpl"/> class.
+            </summary>
+            <param name="context">HttpContext abstraction.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestContextImpl.RouteData">
+            <summary>
+            Information about the current routing path.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RequestCookieCollectionImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.IRequestCookieCollection"/> abstraction
+            implementing <see cref="T:CMS.Base.Internal.IRequestCookieCollection"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RequestCookieCollectionImpl.#ctor(Microsoft.AspNetCore.Http.IRequestCookieCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl"/> class.
+            </summary>
+            <param name="requestCookies">Underlying IRequestCookieCollection object.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestCookieCollectionImpl.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:CMS.Base.Internal.IRequestCookieCollection"/>.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RequestCookieCollectionImpl.Item(System.String)">
+            <summary>
+            Gets the cookie value with the specified key wrapped into <see cref="T:CMS.Base.Internal.IHttpCookie"/> object.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.ResponseImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.HttpResponse"/> object implementing <see cref="T:CMS.Base.Internal.IResponse"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseImpl.#ctor(Microsoft.AspNetCore.Http.HttpResponse)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.ResponseImpl"/> class.
+            </summary>
+            <param name="response">HttpResponse abstraction.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.Cookies">
+            <summary>
+            Gets an object that can be used to manage cookies for this response.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.Cache">
+            <summary>
+            Gets an object that can be used to manage Cache-Control header for this response.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.ContentType">
+            <summary>
+            Gets content type of current response.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.Headers">
+            <summary>
+            Gets the response headers.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.RedirectLocation">
+            <summary>
+            Gets or sets the value of the HTTP <see langword="Location" /> header.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseImpl.StatusCode">
+            <summary>
+            Gets or sets the HTTP response code.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseImpl.AddHeader(System.String,System.String)">
+            <summary>
+            Adds an HTTP header to the current response.
+            </summary>
+            <param name="name">The name of the HTTP header to add <paramref name="value" /> to.</param>
+            <param name="value">The string to add to the header.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseImpl.Clear">
+            <summary>
+            Clears all headers and content output from the current response.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.IResponseCookies"/> object implementing <see cref="T:CMS.Base.Internal.IResponseCookieCollection"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.#ctor(Microsoft.AspNetCore.Http.IResponseCookies)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl"/> class.
+            </summary>
+            <param name="responseCookies">Underlying IResponseCookies object.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Item(System.String)">
+            <summary>
+            Gets the cookie value with the specified key wrapped into <see cref="T:CMS.Base.Internal.IHttpCookie"/> object.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Update(CMS.Base.Internal.IHttpCookie)">
+            <summary>
+            Updates cookie in collection.
+            </summary>
+            <param name="existingCookie">Cookie to update.</param>
+            <remarks>
+            This method in NETSTANDARD will re-add the cookie into response.
+            </remarks>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Append(CMS.Base.Internal.IHttpCookie)">
+            <summary>
+            Add a new cookie.
+            </summary>
+            <param name="cookie">Cookie to add.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Delete(System.String)">
+            <summary>
+            Sets an expired cookie.
+            </summary>
+            <param name="key">Name of the cookie to expire.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.Clear">
+            <summary>
+            Removes all items from the internal cookie collection copy.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.ResponseCookieCollectionImpl.GetNewCookie(System.String)">
+            <summary>
+            Creates and return new <see cref="T:CMS.AspNetCore.Platform.HttpCookieImpl"/> object.
+            </summary>
+            <param name="name">New cookie name.</param>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.RouteDataImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/> object implementing <see cref="T:CMS.Base.Internal.IRouteData"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.RouteDataImpl.#ctor(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.RouteDataImpl"/> class.
+            </summary>
+            <param name="context">HttpContext abstraction.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RouteDataImpl.DataTokens">
+            <summary>
+            Gets the data tokens produced by routes on the current routing path.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.RouteDataImpl.Values">
+            <summary>
+            Gets the set of values produced by routes on the current routing path.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.SessionImpl">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.ISession"/> object implementing <see cref="T:CMS.Base.Internal.ISession"/> interface.
+            </summary>
+        </member>
+        <member name="F:CMS.AspNetCore.Platform.SessionImpl.mContext">
+            <summary>
+            HttpContext abstraction.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.SessionImpl.#ctor(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.AspNetCore.Platform.SessionImpl"/> class.
+            </summary>
+            <param name="context">HttpContext abstraction.</param>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.SessionImpl.Keys">
+            <summary>
+            Enumerates all the keys, if any.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.SessionImpl.SessionID">
+            <summary>
+            A unique identifier for the current session. This is not the same as the session
+            cookie since the cookie lifetime may not be the same as the session entry lifetime
+            in the data store.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.SessionImpl.IsReadOnly">
+            <summary>
+            Indicates whether the session is read-only or not.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.SessionImpl.Item(System.String)">
+            <summary>
+            Gets or sets a session value by using the specified name.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.SessionImpl.Clear">
+            <summary>
+            Remove all entries from the current session, if any. The session cookie is not removed.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.SessionImpl.Remove(System.String)">
+            <summary>
+            Remove the given key from the session if present.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.SessionImpl.Abandon">
+            <summary>
+            Remove all entries from the current session, if any. The default session cookie is also removed.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.UploadedFilesCollection">
+            <summary>
+            Collection of files within a request.
+            </summary>
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.UploadedFilesCollection.Item(System.Int32)">
+            <inheritdoc/> 
+        </member>
+        <member name="P:CMS.AspNetCore.Platform.UploadedFilesCollection.Count">
+            <inheritdoc/> 
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.UploadedFilesCollection.#ctor(Microsoft.AspNetCore.Http.IFormFileCollection)">
+            <summary>
+            Initializes a new instance of a <see cref="T:CMS.AspNetCore.Platform.UploadedFilesCollection"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.WebPathMapperImpl">
+            <summary>
+            Maps paths from the root of the web application.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.WebPathMapperImpl.GetStaticFilesRootPath">
+            <summary>
+            Gets the application static files root path. Value is read from <see cref="P:Microsoft.AspNetCore.Hosting.IWebHostEnvironment.WebRootPath"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.WebPathMapperImpl.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Initializes a new instance of <see cref="T:CMS.AspNetCore.Platform.WebPathMapperImpl"/>.
+            </summary>
+            <param name="webHostEnvironment">Hosting environment information in which the application is running.</param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.WebPathMapperImpl.GetRootPath">
+            <summary>
+            Gets the application root path.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.PlatformModule">
+            <summary>
+            Represents the module providing basic NETCore implementations.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.PlatformModule.#ctor">
+            <summary>
+            Creates new instance of <see cref="T:CMS.AspNetCore.Platform.PlatformModule"/>
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.PlatformModule.OnPreInit">
+            <summary>
+            Handles the module pre-initialization.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase">
+            <summary>
+            Base class for services which can execute a particular kind of <see cref="T:CMS.Base.Routing.CMSActionResult"/>
+            by manipulating the <see cref="T:Microsoft.AspNetCore.Http.HttpResponse"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when this executor can be used for <paramref name="cmsActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase.ExecuteAsync(Microsoft.AspNetCore.Http.HttpContext,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Performs actions required by <paramref name="cmsActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase.SetCacheHeaders(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Sets cache-related response headers for <paramref name="cmsActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase.SetHeaders(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Sets response headers for <paramref name="cmsActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ActionResultExecutorBase.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Maps <paramref name="cmsActionResult"/> to <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.ContentResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSContentResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ContentResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSContentResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ContentResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.ContentResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.DirectActionResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSDirectActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.DirectActionResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSDirectActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.DirectActionResultExecutor.ExecuteAsync(Microsoft.AspNetCore.Http.HttpContext,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Executes synchronously a <see cref="P:CMS.Base.Routing.CMSDirectActionResult.Action"/> and returns a completed task.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.FileContentResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSFileContentResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.FileContentResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSFileContentResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.FileContentResultExecutor.GetFileResult(CMS.Base.Routing.CMSFileResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.FileContentResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.FileResultExecutorBase">
+            <summary>
+            Base class for services which can execute a <see cref="T:CMS.Base.Routing.CMSFileResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.FileResultExecutorBase.SetHeaders(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Sets <see langword="Content-Disposition"/> response header.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.FileResultExecutorBase.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.FileResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.FileResultExecutorBase.GetFileResult(CMS.Base.Routing.CMSFileResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.FileResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.ForbiddenResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSForbiddenResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ForbiddenResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSForbiddenResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.ForbiddenResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.StatusCodeResult"/> with 403 status code.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.Internal.IActionResultExecutor">
+            <summary>
+            Defines an interface for a service which can execute a particular kind of <see cref="T:CMS.Base.Routing.CMSActionResult"/>
+            by manipulating the <see cref="T:Microsoft.AspNetCore.Http.HttpResponse"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.Internal.IActionResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when this executor can be used for <paramref name="cmsActionResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.Internal.IActionResultExecutor.ExecuteAsync(Microsoft.AspNetCore.Http.HttpContext,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Performs actions required by <paramref name="cmsActionResult"/>.
+            </summary>
+            <param name="httpContext">The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.</param>
+            <param name="cmsActionResult">The <see cref="T:CMS.Base.Routing.CMSActionResult"/>.</param>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware">
+            <summary>
+            Represents a routing middleware for Kentico HTTP handlers.
+            </summary>
+        </member>
+        <member name="F:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware.mServiceType">
+            <summary>
+            The route handler type.
+            </summary>
+        </member>
+        <member name="F:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware.mExecutors">
+            <summary>
+            ActionResult executors.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.Type,System.Collections.Generic.IEnumerable{CMS.AspNetCore.Platform.Routing.Internal.IActionResultExecutor})">
+            <summary>
+            Creates new instance of <see cref="T:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware"/>.
+            </summary>
+            <param name="next">
+            The <see cref="T:Microsoft.AspNetCore.Http.RequestDelegate"/> representing the next middleware in the pipeline.
+            </param>
+            <param name="actionResultServiceType">
+            Type of service responsible for handling the incoming request by returning a <see cref="T:CMS.Base.Routing.CMSActionResult"/>.
+            </param>
+            <param name="executors">
+            Collection of executors to execute a <see cref="T:CMS.Base.Routing.CMSActionResult"/> returned by the <see cref="T:CMS.Base.Routing.IActionResultService"/>.
+            </param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.Internal.ActionResultMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the logic of the middleware.
+            </summary>
+            <param name="context">
+            The <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>.
+            </param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task"/> that completes when the middleware has completed processing.
+            </returns>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.NotFoundResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSNotFoundResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.NotFoundResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSNotFoundResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.NotFoundResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.NotFoundResult"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.NotModifiedResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSNotModifiedResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.NotModifiedResultExecutor.SetHeaders(Microsoft.AspNetCore.Http.Headers.ResponseHeaders,CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Sets response headers for <paramref name="cmsActionResult" />.
+            </summary>
+            <param name="typedHeaders"></param>
+            <param name="cmsActionResult"></param>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.NotModifiedResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSNotModifiedResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.NotModifiedResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.StatusCodeResult"/> with 304 status code.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.PhysicalFileResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSPhysicalFileResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.PhysicalFileResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSPhysicalFileResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.PhysicalFileResultExecutor.GetFileResult(CMS.Base.Routing.CMSFileResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.PhysicalFileResult"/> or <see cref="T:Microsoft.AspNetCore.Mvc.FileStreamResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.RedirectResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSRedirectResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.RedirectResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSRedirectResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.RedirectResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.RedirectResult"/> with mapped properties.
+            </summary>
+        </member>
+        <member name="T:CMS.AspNetCore.Platform.Routing.UnauthorizedResultExecutor">
+            <summary>
+            Represents a service which can execute a <see cref="T:CMS.Base.Routing.CMSUnauthorizedResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.UnauthorizedResultExecutor.CanExecute(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            <see langword="true"/> when <paramref name="cmsActionResult"/> is <see cref="T:CMS.Base.Routing.CMSUnauthorizedResult"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.AspNetCore.Platform.Routing.UnauthorizedResultExecutor.MapToActionResult(CMS.Base.Routing.CMSActionResult)">
+            <summary>
+            Returns <see cref="T:Microsoft.AspNetCore.Mvc.UnauthorizedResult"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.Base.UploadExtensions.IFormFileExtensions">
+            <summary>
+            Provides methods to get a wrapper object implementing <see cref="T:CMS.Base.IUploadedFile"/> interface.
+            </summary>
+        </member>
+        <member name="M:CMS.Base.UploadExtensions.IFormFileExtensions.ToUploadedFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Returns a wrapper object over <see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> implementing <see cref="T:CMS.Base.IUploadedFile"/> interface.
+            </summary>
+        </member>
+        <member name="T:CMS.Base.Internal.RequestKenticoExtensions">
+            <summary>
+            Extension methods upon the <see cref="T:Microsoft.AspNetCore.Http.HttpRequest"/>.
+            </summary>
+        </member>
+        <member name="M:CMS.Base.Internal.RequestKenticoExtensions.Kentico(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Returns a <seealso cref="T:CMS.Base.Internal.IRequest"/> created out of <paramref name="request"/>.
+            </summary>
+        </member>
+        <member name="T:CMS.Base.UploadedFile">
+            <summary>
+            Wrapper over <see cref="T:Microsoft.AspNetCore.Http.IFormFile"/> object implementing <see cref="T:CMS.Base.IUploadedFile"/> interface.
+            </summary>
+        </member>
+        <member name="P:CMS.Base.UploadedFile.CanOpenReadStream">
+            <summary>
+            Gets a value that indicates whether this implementation supports accessing the input stream
+            via <see cref="M:CMS.Base.UploadedFile.OpenReadStream"/> method. This property always returns <see langword="true"/>.
+            </summary>
+            <return>
+            <see langword="true"/> to indicate that the input stream must be accessed via <see cref="M:CMS.Base.UploadedFile.OpenReadStream"/> method.
+            </return>
+        </member>
+        <member name="P:CMS.Base.UploadedFile.ContentType">
+            <summary>
+            Gets the MIME content type of an uploaded file.
+            </summary>
+        </member>
+        <member name="P:CMS.Base.UploadedFile.Length">
+            <summary>
+            Gets the size of an uploaded file in bytes.
+            </summary>
+        </member>
+        <member name="P:CMS.Base.UploadedFile.FileName">
+            <summary>
+            Gets the fully qualified name of the file on the client.
+            </summary>
+        </member>
+        <member name="P:CMS.Base.UploadedFile.InputStream">
+            <summary>
+            Gets a <see cref="T:System.IO.Stream"/> object that points to an uploaded file.
+            This property is not currently supported.
+            The input stream must be accessed via <see cref="M:CMS.Base.UploadedFile.OpenReadStream"/> method. 
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            Thrown always.
+            </exception>
+        </member>
+        <member name="M:CMS.Base.UploadedFile.#ctor(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CMS.Base.UploadedFile"/> class.
+            </summary>
+            <param name="formFile">The <see cref="T:Microsoft.AspNetCore.Http.IFormFile"/>.</param>
+        </member>
+        <member name="M:CMS.Base.UploadedFile.OpenReadStream">
+            <summary>
+            Opens the request stream for reading the uploaded file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Mvc.SeeOtherResult">
+            <summary>
+            An <see cref="T:Microsoft.AspNetCore.Mvc.StatusCodeResult"/> that when executed will produce an empty
+            <see cref="F:Microsoft.AspNetCore.Http.StatusCodes.Status303SeeOther"/> response.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.SeeOtherResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNetCore.Mvc.SeeOtherResult"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.SeeOtherResult.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNetCore.Mvc.SeeOtherResult"/> class.
+            </summary>
+            <param name="location">Location to put in the response header.</param>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Mvc.SeeOtherResult.Location">
+            <summary>
+            Gets or sets the location to put in the response header.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Mvc.SeeOtherResult.ExecuteResultAsync(Microsoft.AspNetCore.Mvc.ActionContext)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
