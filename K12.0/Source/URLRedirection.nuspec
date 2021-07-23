@@ -10,7 +10,7 @@
     <iconUrl>https://raw.githubusercontent.com/Kentico/devnet.kentico.com/master/marketplace/assets/generic-integration.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Added event to remove spaces before and after URLs and added trim to prevent error when spaces existed</releaseNotes>
+    <releaseNotes>Fixed bug with isng Url.ToString() instead of Url.AbsoluteUri and url param encoding unicode characters</releaseNotes>
     <copyright></copyright>
     <tags>URL Redirection, URL, Redirect, Kentico, MVC</tags>
   </metadata>

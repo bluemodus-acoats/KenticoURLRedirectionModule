@@ -37,4 +37,8 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\URLRedirection.Base\HBS.KenticoURLRedirection.Base\HBS.KenticoURLRedirection.Base.csproj" />
+  </ItemGroup>
+
 </Project>

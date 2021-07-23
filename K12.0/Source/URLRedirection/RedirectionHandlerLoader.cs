@@ -45,7 +45,7 @@ namespace URLRedirection
                 }
 
                 // Get URL and parse it so we can analyze
-                string url = RequestContext.URL.ToString();
+                string url = RequestContext.URL.AbsoluteUri;
                 Uri RequestUrlUri = new Uri(url);
 
                 RedirectionUrlBreakdown CurrentRequestEntry = new RedirectionUrlBreakdown(url, SiteContext.CurrentSiteID);

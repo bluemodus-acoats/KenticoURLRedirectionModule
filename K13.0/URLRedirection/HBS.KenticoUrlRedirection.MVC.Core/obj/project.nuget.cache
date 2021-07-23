@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rFiIIQvAEfRnPeM/699QQwaxJebOvWYGdr8R69x9+Z6rv++VdG0vvmN0sc9HOf5OvGkBRHw87Wgq/wYFubeHUg==",
+  "dgSpecHash": "/Gfo5Km4PR7vG+XpsMCzWTJg8LH9c5TeuLIZrhYw9AtBXjss1sgoXgjwjIE/SVs+aAi4OAHfEfwTuTWm+QB2Ug==",
   "success": true,
   "projectFilePath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\tfayas\\.nuget\\packages\\awssdk.core\\3.5.1.13\\awssdk.core.3.5.1.13.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\awssdk.s3\\3.5.1.4\\awssdk.s3.3.5.1.4.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
-    "C:\\Users\\tfayas\\.nuget\\packages\\hbs.kenticourlredirection.base\\13.0.2\\hbs.kenticourlredirection.base.13.0.2.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\kentico.xperience.libraries\\13.0.0\\kentico.xperience.libraries.13.0.0.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\maxmind.db\\2.6.1\\maxmind.db.2.6.1.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\maxmind.geoip2\\3.2.0\\maxmind.geoip2.3.2.0.nupkg.sha512",
@@ -175,7 +174,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\tfayas\\.nuget\\packages\\ude.netstandard\\1.2.0\\ude.netstandard.1.2.0.nupkg.sha512"
+    "C:\\Users\\tfayas\\.nuget\\packages\\ude.netstandard\\1.2.0\\ude.netstandard.1.2.0.nupkg.sha512",
+    "C:\\Users\\tfayas\\.nuget\\packages\\hbs.kenticourlredirection.base\\13.0.2\\hbs.kenticourlredirection.base.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

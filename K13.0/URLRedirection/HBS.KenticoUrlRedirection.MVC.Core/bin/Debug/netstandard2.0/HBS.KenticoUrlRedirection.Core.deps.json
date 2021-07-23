@@ -7,9 +7,9 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "HBS.KenticoUrlRedirection.Core/13.0.0": {
+      "HBS.KenticoUrlRedirection.Core/13.0.2": {
         "dependencies": {
-          "HBS.KenticoURLRedirection.Base": "13.0.0",
+          "HBS.KenticoURLRedirection.Base": "13.0.2",
           "Kentico.Xperience.Libraries": "13.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "NETStandard.Library": "2.0.3"
@@ -60,17 +60,6 @@
           "lib/netstandard1.3/DocumentFormat.OpenXml.dll": {
             "assemblyVersion": "2.7.2.0",
             "fileVersion": "2.7.2.0"
-          }
-        }
-      },
-      "HBS.KenticoURLRedirection.Base/13.0.0": {
-        "dependencies": {
-          "Kentico.Xperience.Libraries": "13.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/HBS.KenticoURLRedirection.Base.dll": {
-            "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.0.0"
           }
         }
       },
@@ -2314,11 +2303,19 @@
             "fileVersion": "1.0.2.0"
           }
         }
+      },
+      "HBS.KenticoURLRedirection.Base/13.0.2": {
+        "dependencies": {
+          "Kentico.Xperience.Libraries": "13.0.0"
+        },
+        "runtime": {
+          "HBS.KenticoURLRedirection.Base.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "HBS.KenticoUrlRedirection.Core/13.0.0": {
+    "HBS.KenticoUrlRedirection.Core/13.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2350,13 +2347,6 @@
       "sha512": "sha512-tWT7iu0ab9PNoMTWjv24rt+qnyqvcnPOYs167vPnk4aegAYSAxoUjwNW+VxY8xoLtJntQ/JlWTi7Vt+8TghLlQ==",
       "path": "documentformat.openxml/2.7.2",
       "hashPath": "documentformat.openxml.2.7.2.nupkg.sha512"
-    },
-    "HBS.KenticoURLRedirection.Base/13.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-BYxIpDCnyIhK1FnXId7k1d0H0HCTS/a8GApFECaB5BUap9isPrYJpDeZT+ONfl/njkz4Ufb6AJ4HOFrY265sgA==",
-      "path": "hbs.kenticourlredirection.base/13.0.0",
-      "hashPath": "hbs.kenticourlredirection.base.13.0.0.nupkg.sha512"
     },
     "Kentico.Xperience.Libraries/13.0.0": {
       "type": "package",
@@ -3526,6 +3516,11 @@
       "sha512": "sha512-zRWpPAxBg3lNdm4UiKixTe+DFPoNid9CILggTCy/0WR2WKETe17kTWhiiIpLB2k5IEgnvA0QLfKlvd6Tvu0pzA==",
       "path": "ude.netstandard/1.2.0",
       "hashPath": "ude.netstandard.1.2.0.nupkg.sha512"
+    },
+    "HBS.KenticoURLRedirection.Base/13.0.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -6,3 +6,4 @@ H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection.Base
 H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection.Base\HBS.KenticoURLRedirection.Base\obj\Debug\netstandard2.0\HBS.KenticoURLRedirection.Base.csproj.CoreCompileInputs.cache
 H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection.Base\HBS.KenticoURLRedirection.Base\obj\Debug\netstandard2.0\HBS.KenticoURLRedirection.Base.dll
 H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection.Base\HBS.KenticoURLRedirection.Base\obj\Debug\netstandard2.0\HBS.KenticoURLRedirection.Base.pdb
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\URLRedirection.Base\HBS.KenticoURLRedirection.Base\obj\Debug\netstandard2.0\HBS.KenticoURLRedirection.Base.csprojAssemblyReference.cache
