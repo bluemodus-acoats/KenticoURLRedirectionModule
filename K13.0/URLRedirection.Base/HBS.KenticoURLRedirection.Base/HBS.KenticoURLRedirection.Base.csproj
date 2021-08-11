@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>13.0.2</Version>
+    <Version>13.0.3</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico Xperience 13 URL Redirection</Product>
@@ -15,9 +15,11 @@ Originally started with Silvertech, this is the HBS Variant that expanded the fu
     <PackageIcon>favicon-96x96.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Kentico Xperience, URL, Redirect</PackageTags>
-    <PackageReleaseNotes>Added missing default Interface implementation attributes for Admin side</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed culture requirement on it, if no culture assigned just takes first.  Also only will put port # if not 80 or 443.</PackageReleaseNotes>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile></PackageLicenseFile>
+    <AssemblyVersion>13.0.3.0</AssemblyVersion>
+    <FileVersion>13.0.3.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -226,7 +226,7 @@ namespace URLRedirection
                 }
 
                 // Look through Found entries for the one partainig to the culture
-                var CultureEntry = FoundEntries.Where(x => x.Cultures.Contains(currentCulture, StringComparer.InvariantCultureIgnoreCase)).FirstOrDefault();
+                var CultureEntry = FoundEntries.Where(x => x.Cultures.Count() == 0 || x.Cultures.Contains(currentCulture, StringComparer.InvariantCultureIgnoreCase)).FirstOrDefault();
                 if (CultureEntry == null)
                 {
                     // None for this culture found
@@ -415,7 +415,7 @@ namespace URLRedirection
                     string UrlToRedirect = string.Format("{0}://{1}{2}{3}{4}{5}{6}",
                         IsSecure ? "https" : "http",
                         RedirectDomain,
-                        (CultureEntry.RedirectionUrl.Port == 80 && !IsSecure) || (CultureEntry.RedirectionUrl.Port == 443 && IsSecure) ? "" : ":" + CultureEntry.RedirectionUrl.Port,
+                        (CultureEntry.RedirectionUrl.Port != 80 && CultureEntry.RedirectionUrl.Port != 443) ? ":" + CultureEntry.RedirectionUrl.Port : "",
                         (!string.IsNullOrWhiteSpace(VirtalDirectoryPrefix.Trim('/')) ? "/" + VirtalDirectoryPrefix.Trim('/') : ""),
                         (!string.IsNullOrWhiteSpace(RelativePath.Trim('/')) ? "/" + RelativePath.Trim('/') : ""),
                         QueryString,

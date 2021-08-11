@@ -8947,7 +8947,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "13.0.2",
+    "version": "13.0.3",
     "restore": {
       "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj",
       "projectName": "HBS.KenticoURLRedirection.Base",

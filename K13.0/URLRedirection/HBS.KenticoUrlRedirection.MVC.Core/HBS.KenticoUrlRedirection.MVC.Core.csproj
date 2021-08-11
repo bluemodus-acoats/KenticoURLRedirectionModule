@@ -25,7 +25,6 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HBS.KenticoURLRedirection.Base" Version="13.0.2" />
     <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
@@ -35,10 +34,6 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\URLRedirection.Base\HBS.KenticoURLRedirection.Base\HBS.KenticoURLRedirection.Base.csproj" />
   </ItemGroup>
 
 </Project>

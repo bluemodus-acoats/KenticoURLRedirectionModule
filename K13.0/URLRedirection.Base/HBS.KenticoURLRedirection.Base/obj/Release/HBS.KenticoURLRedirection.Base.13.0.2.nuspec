@@ -9,7 +9,7 @@
     <description>(This is the shared Base package, please either use HBS.KenticoURLRedirection.Admin for the admin site, or HBS.KenticoURLRedirection.Core / HBS.KenticoURLRedirection for the MVC.Net Core / MVC.Net site, respectively)
 
 Originally started with Silvertech, this is the HBS Variant that expanded the functionality of the URL redirection.  This tool allows you to create 301 or 302 redirects with functions such as Query String append/combination, exact or approx matching, etc.</description>
-    <releaseNotes>Added missing default Interface implementation attributes for Admin side</releaseNotes>
+    <releaseNotes>Removed culture requirement on it, if no culture assigned just takes first.  Also only will put port # if not 80 or 443.</releaseNotes>
     <copyright>Trevor Fayas @HBS.net</copyright>
     <tags>Kentico Xperience, URL, Redirect</tags>
     <repository type="GIT" url="https://github.com/KenticoDevTrev/KenticoURLRedirectionModule" />

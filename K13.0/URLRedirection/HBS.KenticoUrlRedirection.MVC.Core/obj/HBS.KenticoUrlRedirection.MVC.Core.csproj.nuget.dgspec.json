@@ -4,14 +4,14 @@
     "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj": {}
   },
   "projects": {
-    "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj": {
+    "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj": {
       "version": "13.0.2",
       "restore": {
-        "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj",
-        "projectName": "HBS.KenticoURLRedirection.Base",
-        "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj",
+        "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
+        "projectName": "HBS.KenticoUrlRedirection.MVC.Core",
+        "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
         "packagesPath": "C:\\Users\\tfayas\\.nuget\\packages\\",
-        "outputPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\obj\\",
+        "outputPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -44,79 +44,6 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Kentico.Xperience.Libraries": {
-              "target": "Package",
-              "version": "[13.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj": {
-      "version": "13.0.2",
-      "restore": {
-        "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
-        "projectName": "HBS.KenticoUrlRedirection.MVC.Core",
-        "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
-        "packagesPath": "C:\\Users\\tfayas\\.nuget\\packages\\",
-        "outputPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\tfayas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "H:\\Web\\LocalNuGet": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
-            "projectReferences": {
-              "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj": {
-                "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
-          "dependencies": {
-            "HBS.KenticoURLRedirection.Base": {
-              "target": "Package",
-              "version": "[13.0.2, )"
-            },
             "Kentico.Xperience.Libraries": {
               "target": "Package",
               "version": "[13.0.0, )"

@@ -2767,19 +2767,6 @@
         "runtime": {
           "lib/netstandard2.0/Ude.NetStandard.dll": {}
         }
-      },
-      "HBS.KenticoURLRedirection.Base/13.0.2": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Kentico.Xperience.Libraries": "13.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HBS.KenticoURLRedirection.Base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HBS.KenticoURLRedirection.Base.dll": {}
-        }
       }
     }
   },
@@ -8487,7 +8474,7 @@
       ]
     },
     "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "sha512": "JF+wDdfFiRl3rz3dPMfR6aR568AW2J5CUMmhSflgHDz4zbVK4/00ax8UHnHyEMvblPewgNugjuA4oyoL8Pex2g==",
       "type": "package",
       "path": "system.text.encodings.web/4.5.0",
       "files": [
@@ -9026,16 +9013,10 @@
         "ude.netstandard.1.2.0.nupkg.sha512",
         "ude.netstandard.nuspec"
       ]
-    },
-    "HBS.KenticoURLRedirection.Base/13.0.2": {
-      "type": "project",
-      "path": "../../URLRedirection.Base/HBS.KenticoURLRedirection.Base/HBS.KenticoURLRedirection.Base.csproj",
-      "msbuildProject": "../../URLRedirection.Base/HBS.KenticoURLRedirection.Base/HBS.KenticoURLRedirection.Base.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "HBS.KenticoURLRedirection.Base >= 13.0.2",
       "Kentico.Xperience.Libraries >= 13.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "NETStandard.Library >= 2.0.3"
@@ -9072,11 +9053,7 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {
-            "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj": {
-              "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -9089,10 +9066,6 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
-          "HBS.KenticoURLRedirection.Base": {
-            "target": "Package",
-            "version": "[13.0.2, )"
-          },
           "Kentico.Xperience.Libraries": {
             "target": "Package",
             "version": "[13.0.0, )"
