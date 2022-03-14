@@ -28,17 +28,17 @@ namespace URLRedirection.Admin
         {
             if (e.ResourceName.Equals("URLRedirection", System.StringComparison.InvariantCultureIgnoreCase))
             {
-                e.Manifest.Metadata.Id = "HBS.KenticoURLRedirection.Admin";
+                e.Manifest.Metadata.Id = "XperienceCommunity.UrlRedirection.Admin";
                 e.Manifest.Metadata.SetIconUrl("https://raw.githubusercontent.com/Kentico/devnet.kentico.com/master/marketplace/assets/HBS-Logo.png");
                 e.Manifest.Metadata.SetProjectUrl("https://github.com/KenticoDevTrev/KenticoURLRedirectionModule");
-                e.Manifest.Metadata.Title = "Kentico URL Redirection";
-                e.Manifest.Metadata.ReleaseNotes = "Updated to KX 13";
+                e.Manifest.Metadata.Title = "Xperience URL Redirection";
+                e.Manifest.Metadata.ReleaseNotes = "Republished under XperienceCommunity (formerly HBS.KenticoUrlRedirection.Admin)";
                 e.Manifest.Metadata.Tags = "URL Redirection, URL, Redirect, Kentico, MVC";
                 // Add dependencies
                 List<PackageDependency> NetStandardDependencies = new List<PackageDependency>()
                 {
                     new PackageDependency("Kentico.Xperience.Libraries", new VersionRange(new NuGetVersion("13.0.0")), new string[] { }, new string[] {"Build","Analyzers"}),
-                    new PackageDependency("HBS.KenticoURLRedirection.Base", new VersionRange(new NuGetVersion("13.0.2")), new string[] { }, new string[] {"Build","Analyzers"})
+                    new PackageDependency("XperienceCommunity.UrlRedirection.Base", new VersionRange(new NuGetVersion("13.0.6")), new string[] { }, new string[] {"Build","Analyzers"})
                 };
                 PackageDependencyGroup PackageGroup = new PackageDependencyGroup(new NuGet.Frameworks.NuGetFramework(".NETStandard2.0"), NetStandardDependencies);
                 e.Manifest.Metadata.DependencyGroups = new PackageDependencyGroup[] { PackageGroup };

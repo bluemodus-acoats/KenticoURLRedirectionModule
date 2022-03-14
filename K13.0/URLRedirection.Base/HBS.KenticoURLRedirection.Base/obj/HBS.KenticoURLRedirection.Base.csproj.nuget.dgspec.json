@@ -5,10 +5,10 @@
   },
   "projects": {
     "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj": {
-      "version": "13.0.3",
+      "version": "13.0.6",
       "restore": {
         "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj",
-        "projectName": "HBS.KenticoURLRedirection.Base",
+        "projectName": "XperienceCommunity.UrlRedirection.Base",
         "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\HBS.KenticoURLRedirection.Base.csproj",
         "packagesPath": "C:\\Users\\tfayas\\.nuget\\packages\\",
         "outputPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection.Base\\HBS.KenticoURLRedirection.Base\\obj\\",

@@ -2767,6 +2767,18 @@
         "runtime": {
           "lib/netstandard2.0/Ude.NetStandard.dll": {}
         }
+      },
+      "XperienceCommunity.UrlRedirection.Base/13.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Kentico.Xperience.Libraries": "13.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/HBS.KenticoURLRedirection.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/HBS.KenticoURLRedirection.Base.dll": {}
+        }
       }
     }
   },
@@ -5289,7 +5301,6 @@
       "path": "system.diagnostics.process/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5509,7 +5520,6 @@
       "path": "system.dynamic.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5968,7 +5978,6 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6095,7 +6104,6 @@
       "path": "system.linq.expressions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8474,7 +8482,7 @@
       ]
     },
     "System.Text.Encodings.Web/4.5.0": {
-      "sha512": "JF+wDdfFiRl3rz3dPMfR6aR568AW2J5CUMmhSflgHDz4zbVK4/00ax8UHnHyEMvblPewgNugjuA4oyoL8Pex2g==",
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "type": "package",
       "path": "system.text.encodings.web/4.5.0",
       "files": [
@@ -8810,7 +8818,6 @@
       "path": "system.threading.thread/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9013,13 +9020,27 @@
         "ude.netstandard.1.2.0.nupkg.sha512",
         "ude.netstandard.nuspec"
       ]
+    },
+    "XperienceCommunity.UrlRedirection.Base/13.0.6": {
+      "sha512": "iaXwn5qOf83GSwqLoe2jTjiVjW14NKKj+DMSYAby5CcaVay48Id0pnq2zVMZZaFatMouqO0jcgV8uw5JW9eYqw==",
+      "type": "package",
+      "path": "xperiencecommunity.urlredirection.base/13.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hbs-favicon-96x96.png",
+        "lib/netstandard2.0/HBS.KenticoURLRedirection.Base.dll",
+        "xperiencecommunity.urlredirection.base.13.0.6.nupkg.sha512",
+        "xperiencecommunity.urlredirection.base.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Kentico.Xperience.Libraries >= 13.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "XperienceCommunity.UrlRedirection.Base >= 13.0.6"
     ]
   },
   "packageFolders": {
@@ -9027,10 +9048,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "13.0.2",
+    "version": "13.0.6",
     "restore": {
       "projectUniqueName": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
-      "projectName": "HBS.KenticoUrlRedirection.MVC.Core",
+      "projectName": "XperienceCommunity.UrlRedirection",
       "projectPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
       "packagesPath": "C:\\Users\\tfayas\\.nuget\\packages\\",
       "outputPath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\obj\\",
@@ -9079,6 +9100,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "XperienceCommunity.UrlRedirection.Base": {
+            "target": "Package",
+            "version": "[13.0.6, )"
           }
         },
         "imports": [

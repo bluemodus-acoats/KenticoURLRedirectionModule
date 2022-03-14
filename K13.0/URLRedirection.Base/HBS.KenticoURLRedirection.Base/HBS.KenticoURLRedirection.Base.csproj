@@ -3,23 +3,24 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>13.0.3</Version>
+    <Version>13.0.6</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico Xperience 13 URL Redirection</Product>
-    <Description>(This is the shared Base package, please either use HBS.KenticoURLRedirection.Admin for the admin site, or HBS.KenticoURLRedirection.Core / HBS.KenticoURLRedirection for the MVC.Net Core / MVC.Net site, respectively)
+    <Description>(This is the shared Base package, please either use XperienceCommunity.UrlRedirection.Admin or XperienceCommunity.UrlRedirection)
 
-Originally started with Silvertech, this is the HBS Variant that expanded the functionality of the URL redirection.  This tool allows you to create 301 or 302 redirects with functions such as Query String append/combination, exact or approx matching, etc.</Description>
+This tool allows you to create 301 or 302 redirects with functions such as Query String append/combination, exact or approx matching, etc.  For Kentico Xperience 13</Description>
     <Copyright>Trevor Fayas @HBS.net</Copyright>
     <RepositoryUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</RepositoryUrl>
-    <PackageIcon>favicon-96x96.png</PackageIcon>
+    <PackageIcon>hbs-favicon-96x96.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Kentico Xperience, URL, Redirect</PackageTags>
-    <PackageReleaseNotes>Removed culture requirement on it, if no culture assigned just takes first.  Also only will put port # if not 80 or 443.</PackageReleaseNotes>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageReleaseNotes>Republishing under XperienceCommunity prefix</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageLicenseFile></PackageLicenseFile>
-    <AssemblyVersion>13.0.3.0</AssemblyVersion>
-    <FileVersion>13.0.3.0</FileVersion>
+    <AssemblyVersion>13.0.5.0</AssemblyVersion>
+    <FileVersion>13.0.5.0</FileVersion>
+    <PackageId>XperienceCommunity.UrlRedirection.Base</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +28,7 @@ Originally started with Silvertech, this is the HBS Variant that expanded the fu
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\tfayas\Desktop\favicon-96x96.png">
+    <None Include="..\..\..\..\hbs-favicon-96x96.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

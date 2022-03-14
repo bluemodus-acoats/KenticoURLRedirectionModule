@@ -6,27 +6,23 @@ It was originally created by Silver Tech, but it was forked off by HBS and upgra
 
 ## Compatibility
 
- - .NET 4.8 or greater (for KX 13 MVC), or .Net Core 3.1 / .Net 5.0 (for KX 13 MVC Core)
+ - .Net Core 3.1 / .Net 5.0 (for KX 13 MVC Core)
  - Kentico Version 13.0.0 or greater
 
 ## Installation Instructions (Both)
 
-Install the latest version of the Kentico URL Redirection Admin [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.Admin/) on your Kentico installation
-`Install-Package HBS.KenticoUrlRedirection.Admin`
+Install the latest version of the XperienceCommunity.UrlRedirection.Admin [nuget package](https://www.nuget.org/packages/XperienceCommunity.UrlRedirection.Admin) on your Kentico installation
+`Install-Package XperienceCommunity.UrlRedirection.Admin`
 
 Since this package depends on the Kentico.Xperience.Libraries, this nuget package will install, please make sure to upgrade the `Kentico.Xperience.Libraries` nuget package to the version that matches your Kentico Solution's hotfix!
 
 ## Installation (MVC.Net Core)
-On your MVC.Net Core Sites, install the Kentico URL Redirection MVC Core [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.MVC.Core/)
-`Install-Package HBS.KenticoUrlRedirection.MVC.Core`
+On your MVC.Net Core Sites, install the XperienceCommunity.UrlRedirection [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.MVC.Core/)
+`Install-Package https://nuget.org/packages/XperienceCommunity.UrlRedirection`
 
 In your startup's `ConfigureServices(IServiceCollection services)` method, add: `services.AddURLRedirection();`
 
 Also in your startup's `Configure(IApplicationBuilder app)` method, add: `app.UseURLRedirection();` where you wish to wire up this middleware.  I put it before the UseEndPoints myself.
-
-## Installation (MVC.Net)
-On your MVC Sites, install the Kentico URL Redirection MVC [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.MVC/)
-`Install-Package HBS.KenticoUrlRedirection.MVC`
 
 
 ## LIMITATIONS/REQUIRED SETUP
@@ -93,7 +89,7 @@ Exact Match will match based on the URL and the Query String, but since Hash val
 This project uses a standard MIT license which can be found [here](https://github.com/KenticoDevTrev/KenticoURLRedirectionModule/blob/master/LICENSE).
 
 ## Contribution
-Contributions to this module are welcome. All the source files for this module are included and you just need to add the project to a Kentico Web Application solution and you can start editing anything you like. A ZIP export of the most recent, _unsealed_, version of the module is also included in the root of this repo so you can easily import the module database items into your Kentico project through the **Sites** application. This file is named **KenticoURLRedirection_13.0.3.zip** and will be needed if you want to edit anything related to the module inside the CMS.
+Contributions to this module are welcome. All the source files for this module are included and you just need to add the project to a Kentico Web Application solution and you can start editing anything you like. 
 
  Submit a pull request to the repo with your code changes as well as an updated ZIP file (if CMS changes were made) and we will review and provide feedback. We will also update the NuGet package to a new version once we approve your changes.
 

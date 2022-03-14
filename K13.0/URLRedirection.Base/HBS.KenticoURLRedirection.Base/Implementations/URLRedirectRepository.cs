@@ -350,10 +350,10 @@ namespace URLRedirection
                         IsSecure = AbsoluteUrl.ToLower().StartsWith("https");
                     }
 
-                    if (RedirectDomain.ToLower().StartsWith("http"))
+                    if (Redirect.OriginalUrl.ToLower().StartsWith("http"))
                     {
-                        IsSecure = RedirectDomain.ToLower().StartsWith("https");
-                        RedirectDomain = new Uri(RedirectDomain).Host;
+                        IsSecure = Redirect.OriginalUrl.ToLower().StartsWith("https");
+                        RedirectDomain = new Uri(Redirect.OriginalUrl).Host;
                     }
                     else
                     {

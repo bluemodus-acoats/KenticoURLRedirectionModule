@@ -3,34 +3,34 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>URLRedirection</RootNamespace>
-    <AssemblyName>HBS.KenticoUrlRedirection.Core</AssemblyName>
-    <PackageId>HBS.KenticoUrlRedirection.MVC.Core</PackageId>
-    <Version>13.0.2</Version>
+    <AssemblyName>XperienceCommunity.UrlRedirection</AssemblyName>
+    <PackageId>XperienceCommunity.UrlRedirection</PackageId>
+    <Version>13.0.6</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico URL Redirection</Product>
-    <Description>This is for the Kentico Xperience 13 .net Core solution (Site).  Must install HBS.KenticoURLRedirection.Admin on the administrator site prior to usage.
+    <Description>This is for the Kentico Xperience 13 .net Core solution (Site).  Must install XperienceCommunity.UrlRedirection.Admin on the administrator site prior to usage.
 
 Enables custom 301 and 302 redirects to be created and managed within Kentico Xperience 13.  Handles Query String matching/combining/appending, lingual, exact match vs. not, etc.
 
-Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirection(); in your startup to leverage.
-</Description>
+Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirection(); in your startup to leverage.</Description>
     <Copyright>Heartland Business Systems</Copyright>
     <PackageProjectUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</PackageProjectUrl>
-    <PackageIcon>favicon-96x96.png</PackageIcon>
+    <PackageIcon>hbs-favicon-96x96.png</PackageIcon>
     <RepositoryUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</RepositoryUrl>
     <PackageTags>Kentico, Xperience, Redirection, URL</PackageTags>
-    <PackageReleaseNotes>Updated to use the proper Base package</PackageReleaseNotes>
+    <PackageReleaseNotes>Republished under XperienceCommunity</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="XperienceCommunity.UrlRedirection.Base" Version="13.0.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="C:\Users\tfayas\Desktop\favicon-96x96.png">
+    <None Include="..\..\..\..\hbs-favicon-96x96.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "HBS.KenticoURLRedirection.Base/13.0.2": {
+      "HBS.KenticoURLRedirection.Base/13.0.4": {
         "dependencies": {
           "Kentico.Xperience.Libraries": "13.0.0",
           "NETStandard.Library": "2.0.3"
@@ -2274,7 +2274,7 @@
     }
   },
   "libraries": {
-    "HBS.KenticoURLRedirection.Base/13.0.2": {
+    "HBS.KenticoURLRedirection.Base/13.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

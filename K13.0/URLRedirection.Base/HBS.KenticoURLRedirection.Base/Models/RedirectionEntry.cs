@@ -1,4 +1,6 @@
-﻿using CMS.Helpers;
+﻿using CMS.Core;
+using CMS.EventLog;
+using CMS.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,14 +50,23 @@ namespace URLRedirection
 
         public RedirectionEntry(RedirectionTableInfo TableEntry, int SiteID)
         {
-            IncomingUrl = new RedirectionUrlBreakdown(TableEntry.RedirectionOriginalURL, SiteID);
-            RedirectionUrl = new RedirectionUrlBreakdown(TableEntry.RedirectionTargetURL, SiteID);
-            this.SiteID = SiteID;
-            AppendQueryString = TableEntry.RedirectionAppendQueryString;
-            Cultures = DataHelper.GetNotEmpty(TableEntry.RedirectionCultures, "").Split(";|,".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
-            RedirectionType = TableEntry.RedirectionType;
-            // None value in UniSelector = "0"
-            CultureOverride = TableEntry.RedirectionCultureOverride.Replace("0","");
+            try
+            {
+                this.SiteID = SiteID;
+                AppendQueryString = TableEntry.RedirectionAppendQueryString;
+                Cultures = DataHelper.GetNotEmpty(TableEntry.RedirectionCultures, "").Split(";|,".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
+                RedirectionType = TableEntry.RedirectionType;
+                // None value in UniSelector = "0"
+                CultureOverride = TableEntry.RedirectionCultureOverride.Replace("0", "");
+                IncomingUrl = new RedirectionUrlBreakdown(TableEntry.RedirectionOriginalURL, SiteID);
+                RedirectionUrl = new RedirectionUrlBreakdown(TableEntry.RedirectionTargetURL, SiteID);
+            } catch(Exception ex)
+            {
+                CMS.Core.Service.Resolve<IEventLogService>().LogException("URLRedirection", "ErrorParsingRrewrite", ex, additionalMessage: $"Error parsing either {TableEntry.RedirectionOriginalURL} or {TableEntry.RedirectionTargetURL}, please make sure these are valid urls.");
+                // Set random urls that won't break
+                IncomingUrl = new RedirectionUrlBreakdown("/invalid-"+Guid.NewGuid(), SiteID);
+                RedirectionUrl = new RedirectionUrlBreakdown("/invalid-"+Guid.NewGuid(), SiteID);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eVuCQbWrf+eKUUTt4s8EpdeOY1PZLk2V/OochzQQEoGHAtEKRGYrJwd9YSBV5lc9JP3fpmc118myyVruAfXx4A==",
+  "dgSpecHash": "BAPkn+SQZ3yNAVj7L8wI85DJ96DBvYawU6yhLrJi8xv9DAmywMcGOautiQDQFBAAl6yaLkruCcWvgcH5e0+YvQ==",
   "success": true,
   "projectFilePath": "H:\\Web\\KenticoRepositories\\KenticoURLRedirectionModule\\K13.0\\URLRedirection\\HBS.KenticoUrlRedirection.MVC.Core\\HBS.KenticoUrlRedirection.MVC.Core.csproj",
   "expectedPackageFiles": [
@@ -163,7 +163,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\tfayas\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.regularexpressions\\4.1.0\\system.text.regularexpressions.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\system.threading.accesscontrol\\4.5.0\\system.threading.accesscontrol.4.5.0.nupkg.sha512",
@@ -174,7 +174,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\tfayas\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\tfayas\\.nuget\\packages\\ude.netstandard\\1.2.0\\ude.netstandard.1.2.0.nupkg.sha512"
+    "C:\\Users\\tfayas\\.nuget\\packages\\ude.netstandard\\1.2.0\\ude.netstandard.1.2.0.nupkg.sha512",
+    "C:\\Users\\tfayas\\.nuget\\packages\\xperiencecommunity.urlredirection.base\\13.0.6\\xperiencecommunity.urlredirection.base.13.0.6.nupkg.sha512"
   ],
   "logs": []
 }
