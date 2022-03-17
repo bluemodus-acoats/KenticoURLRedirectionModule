@@ -1,0 +1,9 @@
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\bin\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.deps.json
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\bin\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.dll
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\bin\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.pdb
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.GeneratedMSBuildEditorConfig.editorconfig
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.AssemblyInfoInputs.cache
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.AssemblyInfo.cs
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.csproj.CoreCompileInputs.cache
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.dll
+H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\obj\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.pdb

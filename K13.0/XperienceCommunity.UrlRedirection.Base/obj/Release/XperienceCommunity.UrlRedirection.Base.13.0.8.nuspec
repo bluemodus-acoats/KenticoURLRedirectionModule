@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>XperienceCommunity.UrlRedirection.Base</id>
+    <version>13.0.8</version>
+    <authors>Trevor Fayas</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>hbs-favicon-96x96.png</icon>
+    <description>(This is the shared Base package, please either use XperienceCommunity.UrlRedirection.Admin or XperienceCommunity.UrlRedirection)
+
+This tool allows you to create 301 or 302 redirects with functions such as Query String append/combination, exact or approx matching, etc.  For Kentico Xperience 13</description>
+    <releaseNotes>Adjusted to be .Net core only, using Async operations, and fixed issue with site domain alias mapping not using the Presentation Url</releaseNotes>
+    <copyright>Trevor Fayas @HBS.net</copyright>
+    <tags>Kentico Xperience, URL, Redirect</tags>
+    <repository type="GIT" url="https://github.com/KenticoDevTrev/KenticoURLRedirectionModule" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Kentico.Xperience.Libraries" version="13.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="H:\Web\KenticoRepositories\KenticoURLRedirectionModule\K13.0\XperienceCommunity.UrlRedirection.Base\bin\Release\netstandard2.0\XperienceCommunity.UrlRedirection.Base.dll" target="lib\netstandard2.0\XperienceCommunity.UrlRedirection.Base.dll" />
+    <file src="H:\Web\KenticoRepositories\hbs-favicon-96x96.png" target="\hbs-favicon-96x96.png" />
+  </files>
+</package>
