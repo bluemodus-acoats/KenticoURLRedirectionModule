@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b650803e-b18d-4216-8f2d-066da60656f1": {
+      "ProjectGuid": "b650803e-b18d-4216-8f2d-066da60656f1",
+      "DisplayName": "HBS.KenticoURLRedirection.Base",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

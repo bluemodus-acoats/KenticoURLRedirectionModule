@@ -20,9 +20,10 @@ Since this package depends on the Kentico.Xperience.Libraries, this nuget packag
 On your MVC.Net Core Sites, install the XperienceCommunity.UrlRedirection [nuget package](https://www.nuget.org/packages/HBS.KenticoURLRedirection.MVC.Core/)
 `Install-Package https://nuget.org/packages/XperienceCommunity.UrlRedirection`
 
-In your startup's `ConfigureServices(IServiceCollection services)` method, add: `services.AddURLRedirection();`
+In your startup's `ConfigureServices(IServiceCollection services)` method, add: `services.AddUrlRedirection();`
 
-Also in your startup's `Configure(IApplicationBuilder app)` method, add: `app.UseURLRedirection();` where you wish to wire up this middleware.  I put it before the UseEndPoints myself.
+Also in your startup's `Configure(IApplicationBuilder app)` method, add: `app.UseUrlRedirection();` where you wish to wire up this middleware.  I put it before the UseEndPoints myself.
+
 
 
 ## LIMITATIONS/REQUIRED SETUP
@@ -79,11 +80,12 @@ In Settings > URLS and SEO > Redirections, there are the following settings:
 | Culture Query String Param | Text | Textbox | If set, the URL Redirect will honor cultures passed through this query string.  |
 | Culture Format (No Alias) | int (enum) | Drop down list | What culture format in the URL your site uses, options are xx-XX and xx (example: en-US or en) |
 
-## Event Hooks
-This module has an `UrlRedirectionEvents.GetRequestCulture` Event that you can hook into using normal Kentico Global Event Hooks in a custom loader module.  This allows you to customize how you determine the request's culture, and any culture existing in the URL.  It handles these automatically as best as possible, but may require customization through these Event Hooks to meet your specific requirements.
 
 ## Exact Matches and Hash
 Exact Match will match based on the URL and the Query String, but since Hash values are not passed to the server, they will are not tracked for matching.
+
+## Overrides
+There are 3 interfaces that this tool uses, you can implement your own versions if you wish to customize.  The previous Event Hooks have been removed.
 
 ## License
 This project uses a standard MIT license which can be found [here](https://github.com/KenticoDevTrev/KenticoURLRedirectionModule/blob/master/LICENSE).
