@@ -85,7 +85,10 @@ In Settings > URLS and SEO > Redirections, there are the following settings:
 Exact Match will match based on the URL and the Query String, but since Hash values are not passed to the server, they will are not tracked for matching.
 
 ## Overrides
-There are 3 interfaces that this tool uses, you can implement your own versions if you wish to customize.  The previous Event Hooks have been removed.
+There are 4 interfaces that this tool uses, you can implement your own versions if you wish to customize.  The previous Event Hooks have been removed.
+
+## Logging
+the `IUrlRedirectionResultLogger` provides you entry points to log results.  You can implement your own implementation and hook it up after `services.AddUrlRedirection()` (ex: `services.AddUrlRedirection().AddSingleton<IUrlRedirectionResultLogger, MyCustomUrlRedirectionResultLogger>()`).  The default one does nothing (no logging).  
 
 ## License
 This project uses a standard MIT license which can be found [here](https://github.com/KenticoDevTrev/KenticoURLRedirectionModule/blob/master/LICENSE).

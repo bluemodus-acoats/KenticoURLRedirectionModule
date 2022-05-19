@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>13.0.8</Version>
+    <Version>13.0.9</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico Xperience 13 URL Redirection</Product>
@@ -15,13 +15,14 @@ This tool allows you to create 301 or 302 redirects with functions such as Query
     <PackageIcon>hbs-favicon-96x96.png</PackageIcon>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Kentico Xperience, URL, Redirect</PackageTags>
-    <PackageReleaseNotes>Adjusted to be .Net core only, using Async operations, and fixed issue with site domain alias mapping not using the Presentation Url</PackageReleaseNotes>
+    <PackageReleaseNotes>Incoming requests with a trailing slash were not being matched properly as Url redirect keys have the slashes removed.  Adjusted to remove trailing slash when comparing. Added Logging interface so users can implement.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageLicenseFile></PackageLicenseFile>
-    <AssemblyVersion>13.0.5.0</AssemblyVersion>
-    <FileVersion>13.0.5.0</FileVersion>
+    <AssemblyVersion>13.0.9.0</AssemblyVersion>
+    <FileVersion>13.0.9.0</FileVersion>
     <PackageId>XperienceCommunity.UrlRedirection.Base</PackageId>
     <RootNamespace>XperienceCommunity.UrlRedirection</RootNamespace>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
   </PropertyGroup>
 
   <ItemGroup>

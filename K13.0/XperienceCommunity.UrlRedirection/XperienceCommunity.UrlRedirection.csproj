@@ -5,7 +5,7 @@
     <RootNamespace>URLRedirection</RootNamespace>
     <AssemblyName>XperienceCommunity.UrlRedirection</AssemblyName>
     <PackageId>XperienceCommunity.UrlRedirection</PackageId>
-    <Version>13.0.8</Version>
+    <Version>13.0.9</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico URL Redirection</Product>
@@ -19,8 +19,10 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
     <PackageIcon>hbs-favicon-96x96.png</PackageIcon>
     <RepositoryUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</RepositoryUrl>
     <PackageTags>Kentico, Xperience, Redirection, URL</PackageTags>
-    <PackageReleaseNotes>Revamped for .Net Core only, Async, renamed namespaces to XperienceCommunity.UrlRedirection and adjusted extension methods to be Url vs. URL</PackageReleaseNotes>
+    <PackageReleaseNotes>Incoming requests with a trailing slash were not being matched properly as Url redirect keys have the slashes removed.  Adjusted to remove trailing slash when comparing. Added Logging interface so users can implement.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+    <IsPublishable>True</IsPublishable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,7 +35,10 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
   <ItemGroup>
     <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="XperienceCommunity.UrlRedirection.Base" Version="13.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XperienceCommunity.UrlRedirection.Base\XperienceCommunity.UrlRedirection.Base.csproj" />
   </ItemGroup>
 
 </Project>

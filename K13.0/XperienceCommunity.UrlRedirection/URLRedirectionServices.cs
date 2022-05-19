@@ -8,7 +8,8 @@ namespace XperienceCommunity.UrlRedirection
         {
             services.AddSingleton<IURLRedirectionMethods, URLRedirectionMethods>()
                 .AddSingleton<IURLRedirectionRequestCultureRetriever, URLRedirectionRequestCultureRetriever>()
-                .AddSingleton<IURLRedirectionRepository, URLRedirectRepository>();
+                .AddSingleton<IURLRedirectionRepository, URLRedirectRepository>()
+                .AddSingleton<IURLRedirectionResultLogger, URLRedirectionResultLogger>();
         }
     }
 }

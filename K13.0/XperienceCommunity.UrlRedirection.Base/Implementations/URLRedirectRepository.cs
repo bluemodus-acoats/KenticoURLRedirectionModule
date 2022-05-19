@@ -23,16 +23,19 @@ namespace XperienceCommunity.UrlRedirection
         private readonly ISiteService _siteService;
         private readonly IEventLogService _eventLogService;
         private readonly IURLRedirectionRequestCultureRetriever _uRLRedirectionRequestCultureRetriever;
+        private readonly IURLRedirectionResultLogger _uRLRedirectionResultLogger;
 
         public URLRedirectRepository(IURLRedirectionMethods uRLRedirectionMethods,
             ISiteService siteService,
             IEventLogService eventLogService,
-            IURLRedirectionRequestCultureRetriever uRLRedirectionRequestCultureRetriever)
+            IURLRedirectionRequestCultureRetriever uRLRedirectionRequestCultureRetriever,
+            IURLRedirectionResultLogger urlRedirectionResultLogger)
         {
             _uRLRedirectionMethods = uRLRedirectionMethods;
             _siteService = siteService;
             _eventLogService = eventLogService;
             _uRLRedirectionRequestCultureRetriever = uRLRedirectionRequestCultureRetriever;
+            _uRLRedirectionResultLogger = urlRedirectionResultLogger;
         }
         public async Task<RedirectionResult> GetRedirectUrlAsync(string AbsoluteUrl)
         {
@@ -143,6 +146,7 @@ namespace XperienceCommunity.UrlRedirection
                 // None found, exit
                 if (FoundEntries.Count == 0)
                 {
+                    await _uRLRedirectionResultLogger.LogUnsuccessfulMatchAsync(AbsoluteUrl, PossibleMatchKeys, PathToRedirectionEntry);
                     return new RedirectionResult() {
                         RedirectionFound = false
                     };
@@ -154,6 +158,7 @@ namespace XperienceCommunity.UrlRedirection
                 {
                     // None for this culture found
                     _eventLogService.LogInformation("XperienceCommunity.UrlRedirection.RedirectionHandler.Begin_Execute", "REDIRECT_FAILED", $"The culture code: {LocalizationContext.CurrentCulture.CultureCode} was not assigned to the site. Unable to redirect URL: {RequestContext.RawURL}");
+                    await _uRLRedirectionResultLogger.LogUnsuccessfulCultureMatchAsync(AbsoluteUrl, PossibleMatchKeys, FoundEntries, currentCulture);
                     return new RedirectionResult()
                     {
                         RedirectionFound = false
@@ -343,6 +348,8 @@ namespace XperienceCommunity.UrlRedirection
                         (!string.IsNullOrWhiteSpace(RelativePath.Trim('/')) ? "/" + RelativePath.Trim('/') : ""),
                         QueryString,
                         Hash);
+
+                    await _uRLRedirectionResultLogger.LogSuccessfulMatchAsync(AbsoluteUrl, UrlToRedirect, PossibleMatchKeys, currentCulture, FoundEntries);
 
                     // Redirect
                     switch (CultureEntry.RedirectionType)

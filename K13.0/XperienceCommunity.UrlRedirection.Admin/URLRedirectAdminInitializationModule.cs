@@ -32,7 +32,7 @@ namespace URLRedirection.Admin
                 e.Manifest.Metadata.SetIconUrl("https://raw.githubusercontent.com/Kentico/devnet.kentico.com/master/marketplace/assets/HBS-Logo.png");
                 e.Manifest.Metadata.SetProjectUrl("https://github.com/KenticoDevTrev/KenticoURLRedirectionModule");
                 e.Manifest.Metadata.Title = "Xperience URL Redirection";
-                e.Manifest.Metadata.ReleaseNotes = "Updated to use new Base package";
+                e.Manifest.Metadata.ReleaseNotes = "Forgot to add in unigrid files/resource files after transfer to other publishing env.";
                 e.Manifest.Metadata.Tags = "URL Redirection, URL, Redirect, Kentico, MVC";
                 // Add dependencies
                 List<PackageDependency> NetStandardDependencies = new List<PackageDependency>()

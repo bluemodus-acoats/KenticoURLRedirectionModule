@@ -198,6 +198,9 @@ namespace XperienceCommunity.UrlRedirection
                 TempUrl = Parts[0];
             }
 
+            // remove trailing slashes since will mess up matches otherwise.
+            TempUrl = TempUrl.TrimEnd('/');
+
             // Reconstruct the Path
             if (ExactMatch)
             {
