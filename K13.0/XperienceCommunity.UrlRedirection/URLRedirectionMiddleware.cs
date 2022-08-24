@@ -22,6 +22,7 @@ namespace XperienceCommunity.UrlRedirection
             if (UrlRedirectResult.RedirectionFound)
             {
                 httpContext.Response.Redirect(UrlRedirectResult.RedirectUrl, UrlRedirectResult.RedirectType == 301);
+                await httpContext.Response.CompleteAsync();
             } else
             {
                 await _next(httpContext);

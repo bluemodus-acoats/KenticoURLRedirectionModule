@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>URLRedirection</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <RootNamespace>URLRedirection</RootNamespace>
     <AssemblyName>XperienceCommunity.UrlRedirection</AssemblyName>
     <PackageId>XperienceCommunity.UrlRedirection</PackageId>
-    <Version>13.0.9</Version>
+    <Version>13.0.10</Version>
     <Authors>Trevor Fayas</Authors>
     <Company>Heartland Business Systems</Company>
     <Product>Kentico URL Redirection</Product>
@@ -19,14 +18,15 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
     <PackageIcon>hbs-favicon-96x96.png</PackageIcon>
     <RepositoryUrl>https://github.com/KenticoDevTrev/KenticoURLRedirectionModule</RepositoryUrl>
     <PackageTags>Kentico, Xperience, Redirection, URL</PackageTags>
-    <PackageReleaseNotes>Incoming requests with a trailing slash were not being matched properly as Url redirect keys have the slashes removed.  Adjusted to remove trailing slash when comparing. Added Logging interface so users can implement.</PackageReleaseNotes>
+    <PackageReleaseNotes>Converted to RCL on .net 3.1 in order to add the HttpResponse.CompleteAsync() to the redirect logic.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
     <IsPublishable>True</IsPublishable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\hbs-favicon-96x96.png">
+	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
+	  <None Include="..\..\..\hbs-favicon-96x96.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -34,11 +34,10 @@ Use IServiceCollection.AddURLRedirection(); and ContainerBuilder.UseURLRedirecti
 
   <ItemGroup>
     <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XperienceCommunity.UrlRedirection.Base\XperienceCommunity.UrlRedirection.Base.csproj" />
+    <PackageReference Include="XperienceCommunity.UrlRedirection.Base" Version="13.0.9" />
   </ItemGroup>
 
 </Project>
