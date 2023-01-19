@@ -26,7 +26,7 @@ This tool allows you to create 301 or 302 redirects with functions such as Query
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\hbs-favicon-96x96.png">
+    <None Include=".\hbs-favicon-96x96.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

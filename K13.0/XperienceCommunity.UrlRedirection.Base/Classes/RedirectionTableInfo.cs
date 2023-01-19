@@ -27,7 +27,7 @@ namespace XperienceCommunity.UrlRedirection
         /// <summary>
         /// Type information.
         /// </summary>
-        public static readonly ObjectTypeInfo TYPEINFO = new ObjectTypeInfo(typeof(RedirectionTableInfoProvider), OBJECT_TYPE, "URLRedirection.RedirectionTable", "RedirectionTableID", "RedirectionTableLastModified", "RedirectionTableGuid", null, null, null, "RedirectionSiteID", null, null)
+        public static readonly ObjectTypeInfo TYPEINFO = new ObjectTypeInfo(typeof(RedirectionTableInfoProvider), OBJECT_TYPE, "URLRedirection.RedirectionTable", "RedirectionTableID", "RedirectionTableLastModified", "RedirectionTableGuid", null, "RedirectionOriginalURL", null, "RedirectionSiteID", null, null)
         {
             ModuleName = "URLRedirection",
             TouchCacheDependencies = true,
@@ -51,7 +51,9 @@ namespace XperienceCommunity.UrlRedirection
                 {
                     // Adds the custom class into a new category in the Global objects section of the staging tree
                     new ObjectTreeLocation(GLOBAL, "Redirects")
+                  
                 },
+                
             },
             ContinuousIntegrationSettings =
             {
